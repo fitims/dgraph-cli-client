@@ -2,6 +2,8 @@
 
 This is a dgraph cli client that will execute commands on dgraph. I needed an app to execute queries and mutations on a production server that cannot run ratel or anything else on it.
 
+It uses ```DGRAPH_CONNECTION``` environment variable to read the connection details to the instance of dgraph. If it is not provided,. it will try and connect to localhost.
+
 The cli has the following features:
 ```
 dg exec -query '{ user(func: eq(type, "user")) { uid name } }'
